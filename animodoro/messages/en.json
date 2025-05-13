@@ -4,5 +4,12 @@
 	"light": "Light",
 	"dark": "Dark",
 	"system": "System",
-	"toggleTheme": "Toggle Theme"
+	"toggleTheme": "Toggle Theme",
+
+	"play": "Play",
+	"pause": "Pause",
+	"stop": "Stop",
+	"reload": "Reload",
+	"next": "Next",
+	"previous": "Previous"
 }

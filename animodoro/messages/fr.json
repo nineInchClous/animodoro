@@ -4,5 +4,12 @@
 	"light": "Clair",
 	"dark": "Sombre",
 	"system": "Système",
-	"toggleTheme": "Changer thême"
+	"toggleTheme": "Changer thême",
+
+	"play": "Démarrer",
+	"pause": "Pause",
+	"stop": "Arrêter",
+	"reload": "Réinitialiser",
+	"next": "Suivant",
+	"previous": "Précédent"
 }
