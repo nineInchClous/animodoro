@@ -1,11 +1,11 @@
 <script lang="ts">
+	import { onDestroy } from 'svelte';
+	import { setTimerContext } from '$lib/contexts/timerContext.svelte';
+	import { Timer } from '$lib/entities/timer.svelte';
 	import PlayPauseButton from '$lib/components/timer/PlayPauseButton.svelte';
 	import StopReloadButton from '$lib/components/timer/StopReloadButton.svelte';
 	import NextButton from '$lib/components/timer/NextButton.svelte';
 	import PreviousButton from '$lib/components/timer/PreviousButton.svelte';
-	import { setTimerContext } from '$lib/contexts/timerContext.svelte';
-	import { onDestroy } from 'svelte';
-	import { Timer } from '$lib/entities/timer.svelte';
 	import TimerDisplay from '$lib/components/timer/TimerDisplay.svelte';
 
 	const timer = new Timer();
@@ -17,8 +17,10 @@
 	});
 </script>
 
-<TimerDisplay />
-<PreviousButton />
-<PlayPauseButton />
-<StopReloadButton />
-<NextButton />
+<div class="min-h-[100vh] flex-1 rounded-xl bg-muted/50 md:min-h-min">
+	<TimerDisplay />
+	<PreviousButton />
+	<PlayPauseButton />
+	<StopReloadButton />
+	<NextButton />
+</div>
