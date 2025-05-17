@@ -1,6 +1,5 @@
 ﻿<script lang="ts">
 	import { useSidebar } from '$lib/components/ui/sidebar/index.js';
-	import * as m from '$lib/paraglide/messages';
 	import * as Avatar from '$lib/components/ui/avatar/index.js';
 	import * as DropdownMenu from '$lib/components/ui/dropdown-menu/index.js';
 	import * as Sidebar from '$lib/components/ui/sidebar/index.js';
@@ -62,13 +61,13 @@
 						<DropdownMenu.Group>
 							<DropdownMenu.Item>
 								<BadgeCheck />
-								{m.account()}
+								Account
 							</DropdownMenu.Item>
 						</DropdownMenu.Group>
 						<DropdownMenu.Separator />
 						<DropdownMenu.Item>
 							<LogOut />
-							{m.logOut()}
+							Log out
 						</DropdownMenu.Item>
 					</DropdownMenu.Content>
 				</DropdownMenu.Root>
@@ -80,6 +79,6 @@
 		align="center"
 		hidden={sidebar.state !== 'collapsed' || sidebar.isMobile}
 	>
-		{m.account()}
+		Account
 	</Tooltip.Content>
 </Tooltip.Root>

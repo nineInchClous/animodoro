@@ -3,7 +3,6 @@
 	import Square from '@lucide/svelte/icons/square';
 	import Rotate from '@lucide/svelte/icons/rotate-ccw';
 	import * as Tooltip from '$lib/components/ui/tooltip/index.js';
-	import * as m from '$lib/paraglide/messages.js';
 	import { getTimerContext } from '$lib/contexts/timerContext.svelte';
 
 	const timer = getTimerContext();
@@ -16,14 +15,14 @@
 				<Square />
 			</Tooltip.Trigger>
 			<Tooltip.Content>
-				<p>{m.stop()}</p>
+				<p>Stop</p>
 			</Tooltip.Content>
 		{:else}
 			<Tooltip.Trigger onclick={timer.resetSession} class={buttonVariants({ variant: 'outline' })}>
 				<Rotate />
 			</Tooltip.Trigger>
 			<Tooltip.Content>
-				<p>{m.reload()}</p>
+				<p>Reload</p>
 			</Tooltip.Content>
 		{/if}
 	</Tooltip.Root>

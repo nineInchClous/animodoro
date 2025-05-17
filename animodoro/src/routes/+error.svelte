@@ -6,7 +6,7 @@
 	{#if page.status === 404}
 		<h1>Oops...</h1>
 		<p>The page you're looking for doesn't exist.</p>
-		<a href="/setting">Home</a>
+		<p>Please check your URL or return to the <a href="/">Home Page</a></p>
 	{:else}
 		<h1>{page.status} {page.error?.message}</h1>
 	{/if}

@@ -2,7 +2,6 @@
 	import { buttonVariants } from '$lib/components/ui/button';
 	import Next from '@lucide/svelte/icons/chevron-last';
 	import * as Tooltip from '$lib/components/ui/tooltip/index.js';
-	import * as m from '$lib/paraglide/messages.js';
 	import { getTimerContext } from '$lib/contexts/timerContext.svelte';
 
 	const timer = getTimerContext();
@@ -14,7 +13,7 @@
 			<Next />
 		</Tooltip.Trigger>
 		<Tooltip.Content>
-			<p>{m.next()}</p>
+			<p>Next</p>
 		</Tooltip.Content>
 	</Tooltip.Root>
 </Tooltip.Provider>

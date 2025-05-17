@@ -2,7 +2,6 @@
 	import Play from '@lucide/svelte/icons/play';
 	import Pause from '@lucide/svelte/icons/pause';
 	import * as Tooltip from '$lib/components/ui/tooltip/index.js';
-	import * as m from '$lib/paraglide/messages.js';
 	import { buttonVariants } from '../ui/button/index.js';
 	import { getTimerContext } from '$lib/contexts/timerContext.svelte';
 
@@ -16,14 +15,14 @@
 				<Play />
 			</Tooltip.Trigger>
 			<Tooltip.Content>
-				<p>{m.play()}</p>
+				<p>Play</p>
 			</Tooltip.Content>
 		{:else}
 			<Tooltip.Trigger onclick={timer.pauseTimer} class={buttonVariants({ variant: 'outline' })}>
 				<Pause />
 			</Tooltip.Trigger>
 			<Tooltip.Content>
-				<p>{m.pause()}</p>
+				<p>Pause</p>
 			</Tooltip.Content>
 		{/if}
 	</Tooltip.Root>

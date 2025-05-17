@@ -1,18 +1,17 @@
 <script lang="ts">
 	import * as Sidebar from '$lib/components/ui/sidebar';
-	import * as m from '$lib/paraglide/messages';
 	import Clock from '@lucide/svelte/icons/clock';
 	import Settings from '@lucide/svelte/icons/settings';
 	import { HOME_PATH, SETTINGS_PATH } from '$lib/utils/urlPaths';
 
 	const items = [
 		{
-			title: m.timer(),
+			title: 'Timer',
 			url: HOME_PATH,
 			icon: Clock,
 		},
 		{
-			title: m.settings(),
+			title: 'Settings',
 			url: SETTINGS_PATH,
 			icon: Settings,
 		},
