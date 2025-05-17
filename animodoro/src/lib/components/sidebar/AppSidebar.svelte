@@ -15,10 +15,8 @@
 <Sidebar.Root bind:ref {collapsible} {...restProps}>
 	<AppSidebarHeader />
 	<AppSidebarMain />
-
 	<Sidebar.Footer>
 		<AppSidebarUser />
 	</Sidebar.Footer>
-
 	<Sidebar.Rail />
 </Sidebar.Root>
