@@ -1,6 +1,11 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
 	"hello_world": "Hello, {name} from fr!",
+
+	"timer": "Minuteur",
+	"settings": "Paramètres",
+	"account": "Mon compte",
+	"logOut": "Se déconnecter",
 	"light": "Clair",
 	"dark": "Sombre",
 	"system": "Système",

@@ -2,16 +2,24 @@
 	import { i18n } from '$lib/i18n';
 	import { ParaglideJS } from '@inlang/paraglide-sveltekit';
 	import { ModeWatcher } from 'mode-watcher';
-	import ThemeToggle from '$lib/components/ui/theme-toggle/theme-toggle.svelte';
-	import LocaleToggle from '$lib/components/ui/locale-toggle/local-toggle.svelte';
 	import '../app.css';
+	import AppSidebar from '$lib/components/sidebar/AppSidebar.svelte';
+	import AppBreadcrumb from '$lib/components/sidebar/AppBreadcrumb.svelte';
+	import * as Sidebar from '$lib/components/ui/sidebar/index.js';
 
 	let { children } = $props();
 </script>
 
 <ParaglideJS {i18n}>
+	<Sidebar.Provider>
+		<AppSidebar />
+		<Sidebar.Inset>
+			<AppBreadcrumb />
+			<div class="flex flex-1 flex-col gap-4 p-4 pt-0">
+				{@render children()}
+			</div>
+		</Sidebar.Inset>
+	</Sidebar.Provider>
+
 	<ModeWatcher />
-	<ThemeToggle />
-	<LocaleToggle />
-	{@render children()}
 </ParaglideJS>
