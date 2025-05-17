@@ -8,9 +8,6 @@
 	<Sidebar.Menu>
 		<Sidebar.MenuItem>
 			<Sidebar.MenuButton size="lg">
-				{#snippet tooltipContent()}
-					Animodoro
-				{/snippet}
 				{#snippet child({ props })}
 					<a href={HOME_PATH} {...props}>
 						<div
