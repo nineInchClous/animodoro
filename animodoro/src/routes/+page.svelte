@@ -18,3 +18,9 @@
 	<TimerDisplay />
 	<TimerControls />
 </div>
+
+<style lang="postcss">
+	.simple-container {
+		@apply flex flex-col items-center;
+	}
+</style>

@@ -17,8 +17,10 @@ export class Timer {
 	readonly isSessionDone: boolean = $derived(this.currentRoundIndex >= rounds.length - 1);
 
 	readonly currentTimeDisplay: string = $derived(secondsToTime(this.currentTime));
-	readonly currentTimeProgressValue: number = $derived(secondsToProgressValue(this.currentTime, rounds[this.currentRoundIndex] * MINUTES_TO_SECONDS));
-	readonly roundDisplay: string = $derived(`${this.currentRoundIndex + 1} / ${rounds.length}`);
+	readonly currentTimeProgressValue: number =
+		$derived(secondsToProgressValue(this.currentTime, rounds[this.currentRoundIndex] * MINUTES_TO_SECONDS));
+	readonly roundDisplay: string =
+		$derived(`${this.currentRoundIndex + 1} of ${rounds.length}`);
 	readonly roundType: RoundType = $derived(this.currentRoundIndex % 2 === 0 ? 'work' : 'break');
 
 	startTimer = () => {
