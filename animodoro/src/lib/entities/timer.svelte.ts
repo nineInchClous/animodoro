@@ -1,6 +1,7 @@
-﻿import { secondsToTime } from '$lib/utils/timeConverter';
+﻿import { secondsToProgressValue, secondsToTime } from '$lib/utils/timeConverter';
+import type { RoundType } from '$lib/types/RoundType';
 
-const ONE_SECOND = 1000;
+const ONE_SECOND = 100;
 const MINUTES_TO_SECONDS = 60;
 
 const rounds = [25, 5, 25, 5, 25, 5, 25, 15];
@@ -16,8 +17,9 @@ export class Timer {
 	readonly isSessionDone: boolean = $derived(this.currentRoundIndex >= rounds.length - 1);
 
 	readonly currentTimeDisplay: string = $derived(secondsToTime(this.currentTime));
+	readonly currentTimeProgressValue: number = $derived(secondsToProgressValue(this.currentTime, rounds[this.currentRoundIndex] * MINUTES_TO_SECONDS));
 	readonly roundDisplay: string = $derived(`${this.currentRoundIndex + 1} / ${rounds.length}`);
-	readonly roundType: string = $derived(this.currentRoundIndex % 2 === 0 ? 'work' : 'break');
+	readonly roundType: RoundType = $derived(this.currentRoundIndex % 2 === 0 ? 'work' : 'break');
 
 	startTimer = () => {
 		this.interval = setInterval(() => {

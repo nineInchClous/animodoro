@@ -11,17 +11,23 @@
 <Tooltip.Provider>
 	<Tooltip.Root>
 		{#if !timer.isTimerOn}
-			<Tooltip.Trigger onclick={timer.startTimer} class={buttonVariants({ variant: 'outline' })}>
+			<Tooltip.Trigger
+				onclick={timer.startTimer}
+				class={buttonVariants({ variant: 'outline', size: 'lg' })}
+			>
 				<Play />
 			</Tooltip.Trigger>
-			<Tooltip.Content>
+			<Tooltip.Content side="bottom">
 				<p>Play</p>
 			</Tooltip.Content>
 		{:else}
-			<Tooltip.Trigger onclick={timer.pauseTimer} class={buttonVariants({ variant: 'outline' })}>
+			<Tooltip.Trigger
+				onclick={timer.pauseTimer}
+				class={buttonVariants({ variant: 'outline', size: 'lg' })}
+			>
 				<Pause />
 			</Tooltip.Trigger>
-			<Tooltip.Content>
+			<Tooltip.Content side="bottom">
 				<p>Pause</p>
 			</Tooltip.Content>
 		{/if}

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import '../app.css';
 	import '$lib/styles/global.css';
+	import '$lib/styles/timer.css';
 	import { ModeWatcher } from 'mode-watcher';
 	import AppSidebar from '$lib/components/sidebar/AppSidebar.svelte';
 	import AppBreadcrumb from '$lib/components/sidebar/AppBreadcrumb.svelte';

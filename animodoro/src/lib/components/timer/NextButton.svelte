@@ -12,7 +12,7 @@
 		<Tooltip.Trigger onclick={timer.goToNextRound} class={buttonVariants({ variant: 'outline' })}>
 			<Next />
 		</Tooltip.Trigger>
-		<Tooltip.Content>
+		<Tooltip.Content side="bottom">
 			<p>Next</p>
 		</Tooltip.Content>
 	</Tooltip.Root>

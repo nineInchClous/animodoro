@@ -15,7 +15,7 @@
 		>
 			<Previous />
 		</Tooltip.Trigger>
-		<Tooltip.Content>
+		<Tooltip.Content side="bottom">
 			<p>Previous</p>
 		</Tooltip.Content>
 	</Tooltip.Root>

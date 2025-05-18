@@ -1,0 +1,43 @@
+﻿.timer-container {
+    @apply text-center;
+
+    p {
+        @apply my-3;
+    }
+
+    .time-left {
+        @apply text-7xl font-semibold mb-6;
+    }
+
+    .round-count {
+        @apply text-xl;
+    }
+
+    .round-type {
+        @apply text-lg;
+    }
+
+    .timer-image-container {
+        img {
+            @apply mx-auto my-5 max-h-60 p-3;
+        }
+    }
+
+
+    .progress-container {
+        @apply mx-auto px-10;
+        max-width: 1000px;
+
+        div {
+            @apply h-4;
+        }
+    }
+}
+
+.timer-controls-container {
+    @apply flex justify-center items-center gap-1 mt-4 p-2;
+
+    button svg {
+        @apply size-5;
+    }
+}
