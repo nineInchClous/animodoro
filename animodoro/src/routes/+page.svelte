@@ -4,6 +4,7 @@
 	import { Timer } from '$lib/entities/timer.svelte';
 	import TimerControls from '$lib/components/timer/TimerControls.svelte';
 	import TimerDisplay from '$lib/components/timer/TimerDisplay.svelte';
+	import TimerToast from '$lib/components/timer/TimerToast.svelte';
 
 	const timer = new Timer();
 
@@ -17,6 +18,7 @@
 <div class="simple-container">
 	<TimerDisplay />
 	<TimerControls />
+	<TimerToast />
 </div>
 
 <style lang="postcss">
