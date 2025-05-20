@@ -57,11 +57,8 @@ export class Timer {
 
 	goToPreviousRound = () => {
 		this.pauseTimer();
-
 		this.currentRoundIndex = Math.max(0, this.currentRoundIndex - 1);
-
 		this.resetCurrentTime();
-		if (this.autoStart) this.startTimer();
 	};
 
 	resetCurrentTime = () => {

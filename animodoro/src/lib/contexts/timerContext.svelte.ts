@@ -1,5 +1,5 @@
 ﻿import { getContext, setContext } from 'svelte';
-import type {Timer} from "$lib/entities/timer.svelte";
+import type {Timer} from "$lib/states/timer.svelte";
 
 const key = {};
 

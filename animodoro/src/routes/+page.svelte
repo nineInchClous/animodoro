@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onDestroy } from 'svelte';
 	import { setTimerContext } from '$lib/contexts/timerContext.svelte';
-	import { Timer } from '$lib/entities/timer.svelte';
+	import { Timer } from '$lib/states/timer.svelte';
 	import TimerControls from '$lib/components/timer/TimerControls.svelte';
 	import TimerDisplay from '$lib/components/timer/TimerDisplay.svelte';
 	import TimerToast from '$lib/components/timer/TimerToast.svelte';
