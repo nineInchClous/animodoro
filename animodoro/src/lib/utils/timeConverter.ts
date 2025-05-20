@@ -1,4 +1,6 @@
 ﻿function secondsToTime(seconds: number): string {
+	if (seconds < 0) return '';
+
 	const minutes = Math.floor(seconds / 60);
 	const remainingSeconds = seconds % 60;
 
